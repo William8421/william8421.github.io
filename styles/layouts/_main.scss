@@ -1,0 +1,84 @@
+main{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 17%;
+    h1{
+        font-size: 80px;
+    }
+    p{
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+    a{
+        padding: 0.5rem;
+        background-color: $clr-secondary;
+        color: white;
+        text-decoration: none;
+    }
+    
+}
+.container-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .about{
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+        width: 30%;
+        h1{
+            font-family: 'BenchNine', sans-serif;
+            color: $clr-secondary;
+            font-size: 3rem;
+        }
+        h3{
+            color:rgb(61, 10, 16);
+            font-family: 'BenchNine', sans-serif;
+            font-size: 1.8rem;
+        }
+        p{
+            color: $text-color;
+        }
+        }
+}
+.container-projects{
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem;
+}
+.project{
+    background-color: rgb(205, 195, 195);
+    height: 400px;
+    width: 400px;
+    border-radius: 16px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.pic{
+    background-image: url(../../images/portfolio-exercise.png);
+    height: 60%;
+    background-size: cover;
+    border-radius: 16px;
+}
+.text{
+    margin-top: 3rem;
+    text-align: center;
+    
+}
+.button{
+    margin: 2rem auto;
+    a{
+        text-decoration: none;
+        background-color: $clr-secondary;
+        color: $clr-primary;
+        padding: 0.5rem;
+        border-radius: 6px;
+    }
+    a:hover{
+        background-color: rgb(44, 10, 10);
+        transition-duration: 1s;
+    }
+}
+
