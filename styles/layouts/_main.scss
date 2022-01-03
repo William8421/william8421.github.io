@@ -19,14 +19,12 @@ main{
     
 }
 .container-about{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     .about{
         color: white;
         text-align: center;
         margin: 0 auto;
         width: 30%;
+        margin-bottom: 10rem;
         h1{
             font-family: 'BenchNine', sans-serif;
             color: $clr-secondary;
@@ -42,10 +40,9 @@ main{
         }
         }
 }
-.container-projects{
+.sub-container-projects{
     display: flex;
-    justify-content: space-around;
-    margin: 3rem;
+    gap: 20rem
 }
 .project{
     background-color: rgb(205, 195, 195);
@@ -56,11 +53,22 @@ main{
     display: flex;
     flex-direction: column;
 }
+.project-3{
+    margin-top: 2rem;
+}
 .pic{
-    background-image: url(../../images/portfolio-exercise.png);
     height: 60%;
     background-size: cover;
     border-radius: 16px;
+}
+.pic-1{
+    background-image: url(../../images/portfolio-exercise.png);
+}
+.pic-2{
+    background-image: url(../../images/projects2.png);
+}
+.pic-3{
+    background-image: url(../../images/project3.png);
 }
 .text{
     margin-top: 3rem;
@@ -80,5 +88,87 @@ main{
         background-color: rgb(44, 10, 10);
         transition-duration: 1s;
     }
+    
 }
-
+.form-container{
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    .info{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 20%;
+        label{
+            margin-top: 5rem;
+        }
+    }
+}
+form{
+    display: flex;
+    flex-direction: column;
+    input{
+        background-color: transparent;
+        border: black solid 1px;
+        border-radius: 3px;
+        height: 1.5rem;
+    }
+    textarea{
+        background-color: transparent;
+        border: black solid 1px;
+        border-radius: 8px;
+    }
+    .message{
+        align-self: center;
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        input{
+            width: 20%;
+            margin: 0 auto;
+            margin-top: 2rem;
+            padding:  0.5rem;
+            cursor: pointer;
+            
+        }
+        input:hover{
+            background-color: $clr-secondary;
+            color: $clr-primary;
+            transition: 1s;
+        }
+    }
+}
+.btn-home {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 5px solid transparent;
+    outline: none;
+    background-color: $clr-secondary;
+  }  
+  .svg-home {
+    position: absolute;
+    border: none;
+    left: 0;
+    top: 10rem;
+    width: 180px;
+    height: 60px;
+    fill: none;
+    stroke: gray;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }  
+  .btn-home:hover {
+    transition: 1s ease-in-out;
+    background: #0f2130;
+  }  
+  .btn-home:hover .svg-home {
+    stroke-dashoffset: -480;
+  }  
+  .btn-home .s-home {
+    color: $clr-primary;
+    font-size: 30px;
+    font-weight: 100;
+  }

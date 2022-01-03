@@ -9,17 +9,46 @@
 </head>
 <body>
     <div class="container-contact">
+        <div class="sub-container">
+        <header>
+            <nav class="nav-top">
+              <div class="icon">
+                <img src="../images/logo.jpg" alt="" />
+                <div class="name">
+                  <h3><a href="../home.html">William Mallak</a></h3>
+                  <h6><a href="../home.html">Web Developer and designer</a> </h6>
+                </div>
+              </div>
+              <ul>
+                <li><a href="about/about.html">ABOUT ME</a></li>
+                <li><a href="projects/projects.html">PROJECTS</a></li>
+                <li><a href="contact/contact-me.html">CONTACT</a></li>
+              </ul>
+            </nav>
+          </header>
+
     <form action="https://formspree.io/f/xnqleqrk">
+        <div class="form-container">
+        <div class="info">
         <label for="first-name">First Name</label>
         <input type="text" id="first-name" name="first name">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email">
+        </div>
+    <div class="info">
         <label for="second-name">second Name</label>
         <input type="text" id="second-name" name="second name">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="name@example.com">
         <label for="company-name">Company Name</label>
         <input type="text" id="company-name" name="company name">
+    </div>
+</div>
+    <div class="message">
+        <label for="message"></label>
+        <textarea name="message" id="mesaage" cols="83" rows="10"></textarea>
         <input type="submit" value="send">
+    </div>
     </form>
+</div>
 </div>
 </body>
 </html>

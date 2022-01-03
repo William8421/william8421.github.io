@@ -1,9 +1,7 @@
-nav{
-    position: fixed;
+.nav-top{
     display: flex;
     width: 65vw;
-    margin: 2rem 0rem;
-    margin: 2rem 20rem;
+    margin: 2rem;
     background-color: rgba($color: #000000, $alpha: 0.7);
     a{
         text-decoration: none;
@@ -37,7 +35,4 @@ nav{
             }
         }
     }
-}
-footer{
-    border: solid green 1px;
 }
