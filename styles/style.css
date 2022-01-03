@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-image: linear-gradient(to bottom, rgba(2, 0, 36, 0.01) 0%, rgba(8, 0, 2, 0.6839110644) 0%, rgba(10, 1, 3, 0.7707457983) 100%), url(../images/newbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container-about {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(2, 0, 36, 0.01) 0%, rgba(8, 0, 2, 0.6839110644) 0%, rgba(10, 1, 3, 0.7707457983) 100%), url(../images/background-computer.jpeg);
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  width: 65vw;
+  margin: 2rem 0rem;
+  margin: 2rem 20rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav .icon {
+  display: flex;
+}
+nav .icon img {
+  width: 15%;
+  display: block;
+  opacity: 0.5;
+}
+nav .icon .name {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  color: white;
+}
+nav ul {
+  display: flex;
+  margin-left: auto;
+}
+nav ul li {
+  display: flex;
+  list-style-type: none;
+  padding: 0 1rem;
+  margin: 0 1rem;
+  margin-top: 1rem;
+}
+nav ul li a:hover {
+  border-bottom: red 3px solid;
+  cursor: pointer;
+}
+
+footer {
+  border: solid green 1px;
+}
+
+main {
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 17%;
+}
+main h1 {
+  font-size: 80px;
+}
+main p {
+  width: 60%;
+  margin-bottom: 2rem;
+}
+main a {
+  padding: 0.5rem;
+  background-color: #89181e;
+  color: white;
+  text-decoration: none;
+}
+
+.personal {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  width: 30%;
+  padding-top: 2rem;
+}
+
+.project-1 {
+  height: 200px;
+  width: 400px;
+  background-image: url(../images/portfolio-exercise.png);
+  background-size: cover;
+  display: flex;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  box-shadow: 10px 10px 10px tomato;
+}
+.project-1 a {
+  width: 100%;
+}
+.project-1 .project-1:hover {
+  box-shadow: 0 0 0 transparent;
+}
+.project-1 .project-1:active {
+  transform: translateY(10px);
+}
+
+body {
+  background: none;
+}
+
+/*# sourceMappingURL=style.css.map */
