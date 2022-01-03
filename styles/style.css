@@ -205,22 +205,26 @@ form textarea {
   border-radius: 8px;
 }
 form .message {
-  align-self: center;
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 form .message input {
-  width: 20%;
   margin: 0 auto;
   margin-top: 2rem;
-  padding: 0.5rem;
+  padding: 0.5rem 2rem;
   cursor: pointer;
 }
 form .message input:hover {
   background-color: #89181e;
   color: white;
   transition: 1s;
+}
+form .message .submit {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn-home {

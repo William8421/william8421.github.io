@@ -119,15 +119,14 @@ form{
         border-radius: 8px;
     }
     .message{
-        align-self: center;
         margin-top: 5rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
         input{
-            width: 20%;
             margin: 0 auto;
             margin-top: 2rem;
-            padding:  0.5rem;
+            padding:  0.5rem 2rem;
             cursor: pointer;
             
         }
@@ -135,6 +134,11 @@ form{
             background-color: $clr-secondary;
             color: $clr-primary;
             transition: 1s;
+        }
+        .submit{
+            width: 20rem;
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
