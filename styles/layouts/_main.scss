@@ -8,6 +8,7 @@ main{
     }
     p{
         width: 60%;
+        height: 60%;
         margin-bottom: 2rem;
     }
     a{
@@ -42,41 +43,34 @@ main{
 }
 .sub-container-projects{
     display: flex;
-    gap: 20rem
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 65%;
 }
 .project{
     background-color: rgb(205, 195, 195);
-    height: 400px;
-    width: 400px;
+    height: 45%;
+    width: 40%;
     border-radius: 16px;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
-}
-.project-3{
-    margin-top: 2rem;
+    padding: 0 1rem;
 }
 .pic{
     height: 60%;
     background-size: cover;
     border-radius: 16px;
-}
-.pic-1{
-    background-image: url(../../images/portfolio-exercise.png);
-}
-.pic-2{
-    background-image: url(../../images/projects2.png);
-}
-.pic-3{
-    background-image: url(../../images/project3.png);
+    img{
+        width: 100%;
+        border-radius: 16px;
+    }
 }
 .text{
-    margin-top: 3rem;
     text-align: center;
-    
+    margin-top: 15%;
 }
 .button{
-    margin: 2rem auto;
+    margin: 1rem auto;
     a{
         text-decoration: none;
         background-color: $clr-secondary;
@@ -85,10 +79,10 @@ main{
         border-radius: 6px;
     }
     a:hover{
-        background-color: rgb(44, 10, 10);
+        background-color: transparent;
+        border: solid 2px rgb(44, 10, 10);
         transition-duration: 1s;
-    }
-    
+    }  
 }
 .form-container{
     display: flex;
@@ -142,37 +136,3 @@ form{
         }
     }
 }
-.btn-home {
-    width: 180px;
-    height: 60px;
-    cursor: pointer;
-    background: transparent;
-    border: 5px solid transparent;
-    outline: none;
-    background-color: $clr-secondary;
-  }  
-  .svg-home {
-    position: absolute;
-    border: none;
-    left: 0;
-    top: 10rem;
-    width: 180px;
-    height: 60px;
-    fill: none;
-    stroke: gray;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-  }  
-  .btn-home:hover {
-    transition: 1s ease-in-out;
-    background: #0f2130;
-  }  
-  .btn-home:hover .svg-home {
-    stroke-dashoffset: -480;
-  }  
-  .btn-home .s-home {
-    color: $clr-primary;
-    font-size: 30px;
-    font-weight: 100;
-  }

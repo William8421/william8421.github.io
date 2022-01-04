@@ -1,0 +1,16 @@
+.nav-bottom{
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    width: 65vw;
+    height: 5%;
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 2rem 15%;
+    i{
+        color: $clr-secondary;
+    }
+}

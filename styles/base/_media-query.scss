@@ -1,0 +1,43 @@
+@media (min-width:922px) and (max-width:1200px) {
+    .nav-top{
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .sub-container-projects{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .project{
+            height: 50%;
+            width: 40%;
+            font-size: 0.7rem;
+            margin: 0;
+        }
+        .project-3{
+            margin-top: 1rem;
+        }
+    }
+}
+@media (min-width:779px) and (max-width: 921px) {
+    .nav-top{
+        width: 100%;
+        margin: 2rem 0;
+        .icon{
+            img{
+                width: 10%;
+            }
+            h6{
+                display: none;
+            }
+        }
+    }
+    
+    .container-about{
+        .about{
+            width: 60%
+        }
+    }
+    .sub-container-projects{
+        font-size: 0.5rem;
+    }
+}

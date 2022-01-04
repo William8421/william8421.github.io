@@ -42,6 +42,7 @@
   width: 65vw;
   margin: 2rem;
   background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
 }
 .nav-top a {
   text-decoration: none;
@@ -52,7 +53,6 @@
 }
 .nav-top .icon img {
   width: 15%;
-  display: block;
   opacity: 0.5;
 }
 .nav-top .icon .name {
@@ -67,12 +67,10 @@
 .nav-top ul li {
   display: flex;
   list-style-type: none;
-  padding: 0 1rem;
   margin: 0 1rem;
-  margin-top: 1rem;
 }
 .nav-top ul li a:hover {
-  border-bottom: red 3px solid;
+  border-bottom: #89181e 3px solid;
   cursor: pointer;
 }
 
@@ -87,6 +85,7 @@ main h1 {
 }
 main p {
   width: 60%;
+  height: 60%;
   margin-bottom: 2rem;
 }
 main a {
@@ -119,21 +118,19 @@ main a {
 
 .sub-container-projects {
   display: flex;
-  gap: 20rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 65%;
 }
 
 .project {
   background-color: #cdc3c3;
-  height: 400px;
-  width: 400px;
+  height: 45%;
+  width: 40%;
   border-radius: 16px;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
-}
-
-.project-3 {
-  margin-top: 2rem;
+  padding: 0 1rem;
 }
 
 .pic {
@@ -141,26 +138,18 @@ main a {
   background-size: cover;
   border-radius: 16px;
 }
-
-.pic-1 {
-  background-image: url(../../images/portfolio-exercise.png);
-}
-
-.pic-2 {
-  background-image: url(../../images/projects2.png);
-}
-
-.pic-3 {
-  background-image: url(../../images/project3.png);
+.pic img {
+  width: 100%;
+  border-radius: 16px;
 }
 
 .text {
-  margin-top: 3rem;
   text-align: center;
+  margin-top: 15%;
 }
 
 .button {
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 .button a {
   text-decoration: none;
@@ -170,7 +159,8 @@ main a {
   border-radius: 6px;
 }
 .button a:hover {
-  background-color: #2c0a0a;
+  background-color: transparent;
+  border: solid 2px #2c0a0a;
   transition-duration: 1s;
 }
 
@@ -227,43 +217,63 @@ form .message .submit {
   justify-content: space-between;
 }
 
-.btn-home {
-  width: 180px;
-  height: 60px;
-  cursor: pointer;
-  background: transparent;
-  border: 5px solid transparent;
-  outline: none;
-  background-color: #89181e;
+.nav-bottom {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 65vw;
+  height: 5%;
+  position: fixed;
+  bottom: 0;
+  left: 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 2rem 15%;
+}
+.nav-bottom i {
+  color: #89181e;
 }
 
-.svg-home {
-  position: absolute;
-  border: none;
-  left: 0;
-  top: 10rem;
-  width: 180px;
-  height: 60px;
-  fill: none;
-  stroke: gray;
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 150;
-  transition: 1s ease-in-out;
-}
+@media (min-width: 922px) and (max-width: 1200px) {
+  .nav-top {
+    width: 100%;
+    margin: 2rem 0;
+  }
 
-.btn-home:hover {
-  transition: 1s ease-in-out;
-  background: #0f2130;
+  .sub-container-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .sub-container-projects .project {
+    height: 50%;
+    width: 40%;
+    font-size: 0.7rem;
+    margin: 0;
+  }
+  .sub-container-projects .project-3 {
+    margin-top: 1rem;
+  }
 }
+@media (min-width: 779px) and (max-width: 921px) {
+  .nav-top {
+    width: 100%;
+    margin: 2rem 0;
+  }
+  .nav-top .icon img {
+    width: 10%;
+  }
+  .nav-top .icon h6 {
+    display: none;
+  }
 
-.btn-home:hover .svg-home {
-  stroke-dashoffset: -480;
-}
+  .container-about .about {
+    width: 60%;
+  }
 
-.btn-home .s-home {
-  color: white;
-  font-size: 30px;
-  font-weight: 100;
+  .sub-container-projects {
+    font-size: 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
