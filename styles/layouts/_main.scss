@@ -17,14 +17,14 @@ main{
         color: white;
         text-decoration: none;
     }
-    
+
 }
 .container-about{
     .about{
         color: white;
         text-align: center;
         margin: 0 auto;
-        width: 30%;
+        width: 50%;
         margin-bottom: 10rem;
         h1{
             font-family: 'BenchNine', sans-serif;
@@ -45,7 +45,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 65%;
+    width: 70%;
+    gap: 2rem;
 }
 .project{
     background-color: rgb(205, 195, 195);
@@ -82,58 +83,123 @@ main{
         background-color: transparent;
         border: solid 2px rgb(44, 10, 10);
         transition-duration: 1s;
-    }  
-}
-.form-container{
-    display: flex;
-    gap: 10rem;
-    justify-content: center;
-    .info{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 20%;
-        label{
-            margin-top: 5rem;
-        }
     }
 }
 form{
     display: flex;
     flex-direction: column;
-    input{
-        background-color: transparent;
-        border: black solid 1px;
-        border-radius: 3px;
-        height: 1.5rem;
-    }
-    
-    textarea{
-        background-color: transparent;
-        border: black solid 1px;
-        border-radius: 8px;
-    }
-    .message{
-        margin-top: 5rem;
+}
+
+.form-container{
+    display: flex;
+    justify-content: space-between;
+    .info{
+        // border: green solid 1px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 40%;
+        label{
+            margin-top: 5rem;
+        }
         input{
-            margin: 0 auto;
-            margin-top: 2rem;
-            padding:  0.5rem 2rem;
-            cursor: pointer;
-            
-        }
-        input:hover{
-            background-color: $clr-secondary;
-            color: $clr-primary;
-            transition: 1s;
-        }
-        .submit{
-            width: 20rem;
-            display: flex;
-            justify-content: space-between;
-        }
+            width: 100%;
+            padding: 0.5rem 0;
+            background-color: transparent;
+            border-radius: 6px;
+            border: 1px solid black;
+            }
     }
 }
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    textarea{
+        width: 100%;
+        border-radius: 6px;
+            border: 1px solid black;
+            background-color: transparent;
+    }
+    ::placeholder{
+        color: black;
+    }
+}
+.submit{
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    input{
+        padding: 0 2rem;
+        background-color: transparent;
+        border: black solid 1px;
+        border-radius: 16px;
+    }
+}
+// .form-container{
+//     // display: flex;
+//     // gap: 10rem;
+//     justify-content: center;
+//     .info{
+//         display: flex;
+//         flex-direction: column;
+//         text-align: center;
+//         // width: 20%;
+//         label{
+//         margin-top: 5rem;
+//         }
+//     }
+// }
+// form{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     .form-container{
+//         border: red solid 1px;
+//         .info{
+//         border: red solid 1px;
+//         input{
+//             padding: 0 10rem;
+//         }
+//         }
+//     }
+//     input{
+//         background-color: transparent;
+//         border: black solid 1px;
+//         border-radius: 3px;
+//         height: 1.5rem;
+//     }
+
+//     textarea{
+//         background-color: transparent;
+//         border: black solid 1px;
+//         border-radius: 8px;
+//         width: 75%;
+//     }
+//     .message{
+//         margin-top: 5rem;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+
+//     }
+//     .submit{
+//         width: 100%;
+//         display: flex;
+//         justify-content: center;
+//         flex-wrap: wrap;
+//         gap: 2rem;
+//         margin-top: 2rem;
+//         input{
+//             padding: 0 5%;
+//             // width: 10rem;
+//         }
+//         // display: flex;
+//         // justify-content: space-between;
+//     }
+// }

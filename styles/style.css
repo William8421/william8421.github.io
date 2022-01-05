@@ -3,7 +3,6 @@ header .nav-top {
   display: flex;
   width: 65vw;
   margin: 2rem;
-  background-color: rgba(0, 0, 0, 0.7);
   align-items: center;
 }
 header .nav-top a {
@@ -72,7 +71,7 @@ header .burger-menu {
 }
 
 .container-about {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(0deg, #4e8173 0%, #6d787a 100%);
   display: flex;
   flex-direction: column;
@@ -80,7 +79,7 @@ header .burger-menu {
 }
 
 .container-projects {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,7 +87,7 @@ header .burger-menu {
 }
 
 .container-contact {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   background: linear-gradient(0deg, #4e8173 0%, #6d787a 100%);
@@ -119,7 +118,7 @@ main a {
   color: white;
   text-align: center;
   margin: 0 auto;
-  width: 30%;
+  width: 50%;
   margin-bottom: 10rem;
 }
 .container-about .about h1 {
@@ -140,7 +139,8 @@ main a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 65%;
+  width: 70%;
+  gap: 2rem;
 }
 
 .project {
@@ -184,62 +184,67 @@ main a {
   transition-duration: 1s;
 }
 
-.form-container {
-  display: flex;
-  gap: 10rem;
-  justify-content: center;
-}
-.form-container .info {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 20%;
-}
-.form-container .info label {
-  margin-top: 5rem;
-}
-
 form {
   display: flex;
   flex-direction: column;
 }
-form input {
-  background-color: transparent;
-  border: black solid 1px;
-  border-radius: 3px;
-  height: 1.5rem;
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
 }
-form textarea {
-  background-color: transparent;
-  border: black solid 1px;
-  border-radius: 8px;
-}
-form .message {
-  margin-top: 5rem;
+.form-container .info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40%;
 }
-form .message input {
-  margin: 0 auto;
-  margin-top: 2rem;
-  padding: 0.5rem 2rem;
-  cursor: pointer;
+.form-container .info label {
+  margin-top: 5rem;
 }
-form .message input:hover {
-  background-color: #89181e;
-  color: white;
-  transition: 1s;
+.form-container .info input {
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid black;
 }
-form .message .submit {
-  width: 20rem;
+
+.message {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.message textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid black;
+  background-color: transparent;
+}
+.message ::placeholder {
+  color: black;
+}
+
+.submit {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.submit input {
+  padding: 0 2rem;
+  background-color: transparent;
+  border: black solid 1px;
+  border-radius: 16px;
 }
 
 @media (min-width: 922px) and (max-width: 1200px) {
   .nav-top {
-    width: 80vw;
+    width: 80vw !important;
     margin: 2rem 0;
   }
 
@@ -252,7 +257,6 @@ form .message .submit {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 90%;
   }
   .container-projects .sub-container-projects .project {
     height: 50%;
@@ -268,7 +272,7 @@ form .message .submit {
 }
 @media (min-width: 779px) and (max-width: 921px) {
   .nav-top {
-    width: 90vw;
+    width: 90vw !important;
     margin: 2rem 0;
   }
   .nav-top .icon img {
@@ -287,10 +291,6 @@ form .message .submit {
     font-size: 50px;
   }
 
-  .container-about .about {
-    width: 60%;
-  }
-
   .container-projects .sub-container-projects {
     width: 100%;
     gap: 1rem;
@@ -300,29 +300,62 @@ form .message .submit {
   }
 }
 @media (min-width: 600px) and (max-width: 778px) {
-  .nav-top {
-    font-size: 0.8rem;
+  header .nav-top {
     width: 100vw;
     margin: 2rem 0;
   }
-  .nav-top .icon img {
+  header .nav-top ul {
+    display: none;
+  }
+  header .nav-top .icon img {
     width: 10%;
   }
-  .nav-top .icon h6 {
+  header .burger-menu {
+    margin-left: auto;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+  }
+  header .burger-menu .fas {
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+  }
+  header .burger-menu input[type=checkbox] {
     display: none;
+  }
+  header .burger-menu input[type=checkbox]:checked ~ .burger__list {
+    right: 0;
+    display: flex;
+  }
+  header .burger-menu .burger__list {
+    position: absolute;
+    list-style: none;
+    top: 4.5rem;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    background-color: #89181e;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+  }
+  header .burger-menu .burger__list .burger__item {
+    padding: 2rem 0rem;
+  }
+  header .burger-menu .burger__list .burger__item:hover,
+header .burger-menu .burger__list .burger__item :visited,
+header .burger-menu .burger__list .burger__item :link,
+header .burger-menu .burger__list .burger__item :active {
+    text-decoration: none;
+    color: white;
   }
 
   .nav-bottom {
-    width: 100vw;
-    margin: 2rem 0;
-  }
-
-  main h1 {
-    font-size: 40px;
-  }
-
-  .container-about .about {
-    width: 80%;
+    width: 100%;
+    margin: 0;
   }
 
   .container-projects {
@@ -330,38 +363,26 @@ form .message .submit {
     overflow: scroll;
   }
   .container-projects .sub-container-projects {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
     gap: 1rem;
   }
   .container-projects .sub-container-projects .project {
     width: 80%;
   }
-
-  textarea {
-    width: 70%;
-  }
 }
 @media (max-width: 599px) {
-  .nav-top {
+  header .nav-top {
     width: 100vw !important;
     margin: 0 !important;
   }
-  .nav-top ul {
+  header .nav-top ul {
     display: none !important;
   }
-  .nav-top .icon img {
+  header .nav-top .icon img {
     width: 10%;
   }
-  .nav-top .icon h6 {
-    display: none;
-  }
-
   header .burger-menu {
     margin-left: auto;
     width: 4rem;
-    height: 7rem;
     display: flex;
     align-items: center;
   }
@@ -393,7 +414,7 @@ form .message .submit {
     transition: all 0.4s ease-in;
   }
   header .burger-menu .burger__list .burger__item {
-    padding: 3rem 0rem;
+    padding: 2rem 0rem;
   }
   header .burger-menu .burger__list .burger__item:hover,
 header .burger-menu .burger__list .burger__item :visited,
@@ -421,8 +442,27 @@ header .burger-menu .burger__list .burger__item :active {
     margin: 0 auto;
   }
 
-  textarea {
+  .container-about .about {
     width: 80%;
+  }
+
+  .container-projects {
+    height: 100%;
+    overflow: scroll;
+  }
+  .container-projects .sub-container-projects {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+  }
+  .container-projects .sub-container-projects .project {
+    width: 90%;
+  }
+
+  .form-container {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

@@ -13,21 +13,21 @@
     justify-content: center;
 }
 .container-about{
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(0deg, rgba(78,129,115,1) 0%, rgba(109,120,122,1) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .container-projects{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(0deg, rgba(78,129,115,1) 0%, rgba(109,120,122,1) 100%);
 }
 .container-contact{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     background: linear-gradient(0deg, rgba(78,129,115,1) 0%, rgba(109,120,122,1) 100%);

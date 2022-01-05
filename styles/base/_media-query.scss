@@ -1,6 +1,6 @@
 @media (min-width:922px) and (max-width:1200px) {
     .nav-top{
-        width: 80vw;
+        width: 80vw !important;
         margin: 2rem 0;
     }
     .nav-bottom{
@@ -12,7 +12,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            width: 90%;
+            // width: 80%;
             .project{
                 height: 50%;
                 width: 35%;
@@ -28,10 +28,13 @@
             font-size: 60px;
         }
     }
+    .about{
+        // border: solid red 1px;
+    }
 }
 @media (min-width:779px) and (max-width: 921px) {
     .nav-top{
-        width: 90vw;
+        width: 90vw !important;
         margin: 2rem 0;
         .icon{
             img{
@@ -51,94 +54,120 @@
             font-size: 50px;
         }
     }
-    .container-about{
-        .about{
-            width: 60%
-        }
-    }
+    
     .container-projects{
         .sub-container-projects{
-    
             width: 100%;
-            
             gap: 1rem;
-            
             .project{
-            
-                height: 50%;
-            
+            height: 50%;
             }
             
     }
 }
 }
 @media (min-width:600px) and (max-width: 778px) {
-    .nav-top{
-        font-size: 0.8rem;
-        width: 100vw;
-        margin: 2rem 0;
-        .icon{
-            img{
-                width: 10%;
-            }
-            h6{
+    header{
+        .nav-top{
+            width: 100vw;
+            margin: 2rem 0;
+            ul{
                 display: none;
             }
+            .icon{
+                img{
+                    width: 10%;
+                }
+                
+            }
         }
+
+        .burger-menu {
+            margin-left: auto;
+            width: 4rem;
+            display: flex;
+            align-items: center;
+        
+            .fas {
+              font-size: 2.5rem;
+              color: white;
+              cursor: pointer;
+              position: absolute;
+              top: 2rem;
+            }
+        
+            input[type="checkbox"] {
+            display: none;
+            }
+        
+            input[type="checkbox"]:checked ~ .burger__list {
+            right: 0;
+            display: flex;
+            }
+        
+            .burger__list {
+              position: absolute;
+              list-style: none;
+              top: 4.5rem;
+              width: 20%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              display: none;
+              background-color: $clr-secondary;
+              border-radius: 0rem 0rem 0.5rem 0.5rem;
+              .burger__item {
+                padding: 2rem 0rem;
+        
+                &:hover,
+                :visited,
+                :link,
+                :active {
+                  text-decoration: none;
+                  color: white;
+                }
+              }
+            }
+          }
+        
     }
-    .nav-bottom{
-        width: 100vw;
-        margin: 2rem 0;
+        .nav-bottom{
+        width: 100%;
+        margin: 0;
     }
-    main{
-        h1{
-            font-size: 40px;
-        }
-    }
-    .container-about{
-        .about{
-            width: 80%
-        }
-    }
+
+
+    
     .container-projects{
         height: 100%;
         overflow:scroll;
         .sub-container-projects{
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-items: center;
             gap: 1rem;
             .project{
                 width: 80%;
             }
         }
     }
-    textarea{
-        width: 70%;
-    }
 }
 @media (max-width:599px) {
-    .nav-top{
-        width: 100vw !important;
-        margin: 0 !important;
-        ul{
-            display: none !important;
-        }
-        .icon{
-            img{
-                width: 10%;
-            }
-            h6{
-                display: none;
-            }
-        }
-    }
+    
     header{
-        
+        .nav-top{
+            width: 100vw !important;
+            margin: 0 !important;
+            ul{
+                display: none !important;
+            }
+            .icon{
+                img{
+                    width: 10%;
+                }
+            }
+        }
+
         .burger-menu {
             margin-left: auto;
             width: 4rem;
-            height: 7rem;
             display: flex;
             align-items: center;
         
@@ -173,7 +202,7 @@
               transition: all 0.4s ease-in;
         
               .burger__item {
-                padding: 3rem 0rem;
+                padding: 2rem 0rem;
         
                 &:hover,
                 :visited,
@@ -187,8 +216,7 @@
           }
         
     }
-    
-    .nav-bottom{
+        .nav-bottom{
         width: 100%;
         margin: 0;
     }
@@ -205,7 +233,27 @@
             margin: 0 auto;
         }
     }
-    textarea{
-        width: 80%;
+    
+    .container-about{
+        .about{
+            width: 80%;
+        }
+    }
+    .container-projects{
+        height: 100%;
+        overflow:scroll;
+        .sub-container-projects{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 1rem;
+            .project{
+                width: 90%;
+            }
+        }
+    }
+    .form-container{
+        flex-direction: column;
+        align-items: center;
     }
 }
