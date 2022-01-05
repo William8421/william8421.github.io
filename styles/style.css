@@ -1,39 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=BenchNine:wght@700&display=swap");
-.nav-top {
+header .nav-top {
   display: flex;
   width: 65vw;
   margin: 2rem;
   background-color: rgba(0, 0, 0, 0.7);
   align-items: center;
 }
-.nav-top a {
+header .nav-top a {
   text-decoration: none;
   color: white;
 }
-.nav-top .icon {
+header .nav-top .icon {
   display: flex;
 }
-.nav-top .icon img {
+header .nav-top .icon img {
   width: 15%;
   opacity: 0.5;
 }
-.nav-top .icon .name {
+header .nav-top .icon .name {
   margin-left: 1rem;
   margin-top: 0.5rem;
   color: white;
 }
-.nav-top ul {
+header .nav-top ul {
   display: flex;
   margin-left: auto;
 }
-.nav-top ul li {
+header .nav-top ul li {
   display: flex;
   list-style-type: none;
   margin: 0 1rem;
 }
-.nav-top ul li a:hover {
+header .nav-top ul li a:hover {
   border-bottom: #89181e 3px solid;
   cursor: pointer;
+}
+header .burger-menu {
+  display: none;
 }
 
 .nav-bottom {
@@ -342,9 +345,11 @@ form .message .submit {
 }
 @media (max-width: 599px) {
   .nav-top {
-    font-size: 0.8rem;
-    width: 100vw;
-    margin: 2rem 0;
+    width: 100vw !important;
+    margin: 0 !important;
+  }
+  .nav-top ul {
+    display: none !important;
   }
   .nav-top .icon img {
     width: 10%;
@@ -353,8 +358,53 @@ form .message .submit {
     display: none;
   }
 
+  header .burger-menu {
+    margin-left: auto;
+    width: 4rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+  }
+  header .burger-menu .fas {
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 0.2rem;
+  }
+  header .burger-menu input[type=checkbox] {
+    display: none;
+  }
+  header .burger-menu input[type=checkbox]:checked ~ .burger__list {
+    right: 0;
+    display: flex;
+  }
+  header .burger-menu .burger__list {
+    position: absolute;
+    list-style: none;
+    top: 3rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    background-color: #89181e;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    transition: all 0.4s ease-in;
+  }
+  header .burger-menu .burger__list .burger__item {
+    padding: 3rem 0rem;
+  }
+  header .burger-menu .burger__list .burger__item:hover,
+header .burger-menu .burger__list .burger__item :visited,
+header .burger-menu .burger__list .burger__item :link,
+header .burger-menu .burger__list .burger__item :active {
+    text-decoration: none;
+    color: white;
+  }
+
   .nav-bottom {
-    width: 100vw;
+    width: 100%;
     margin: 0;
   }
 
