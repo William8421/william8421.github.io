@@ -1,90 +1,110 @@
 main{
-    color: white;
     position: absolute;
     top: 40%;
     left: 17.5%;
     h1{
         font-size: 80px;
+        color: $clr-secondary;
     }
     p{
         width: 60%;
         height: 60%;
         margin-bottom: 2rem;
+        color: $text-color;
     }
     a{
         padding: 0.5rem;
         background-color: $clr-secondary;
-        color: white;
+        color: $text-color;
         text-decoration: none;
     }
 
 }
 .container-about{
+    padding-top:15rem;
     .about{
-        color: white;
         text-align: center;
         margin: 0 auto;
         width: 50%;
         margin-bottom: 10rem;
         h1{
             font-family: 'BenchNine', sans-serif;
-            color: $clr-secondary;
+            color: $text-color;
             font-size: 3rem;
         }
         h3{
-            color:rgb(61, 10, 16);
+            color: $clr-a;
             font-family: 'BenchNine', sans-serif;
             font-size: 1.8rem;
+            a{
+                color: $clr-secondary;
+            }
         }
         p{
             color: $text-color;
+            line-height: 1.5rem;
         }
-        }
-}
-.sub-container-projects{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 70%;
-    gap: 2rem;
-}
-.project{
-    background-color: rgb(205, 195, 195);
-    height: 45%;
-    width: 40%;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    padding: 0 1rem;
-}
-.pic{
-    height: 60%;
-    background-size: cover;
-    border-radius: 16px;
-    img{
-        width: 100%;
-        border-radius: 16px;
     }
 }
+.sub-container-projects{
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 17.5vw repeat(12, 1fr) 17.5vw;
+    grid-template-rows: repeat(10, 10%);
+    gap: 0.5rem
+}
+.project{
+    
+    .pic{
+        height: 60%;
+        img{
+            width: 100%;
+        }
+    }
+}
+.project-1{
+    grid-area: 1/2/4/8;
+}
+.project-2{
+    grid-area: 1/8/3/10;
+    
+}
+.project-3{
+    grid-area: 1/10/3/14;
+}
+.project-4{
+    grid-area: 4/2/6/8;
+}
+.project-5{
+    grid-area: 3/10/5/14;
+}
+.project-6{
+    grid-area: 5/8/7/14;
+}
+
 .text{
     text-align: center;
     margin-top: 15%;
 }
 .button{
     margin: 1rem auto;
+    font-size: 1.5rem;
     a{
         text-decoration: none;
-        background-color: $clr-secondary;
-        color: $clr-primary;
+        background-color: $clr-primary;
+        color: $text-color;
         padding: 0.5rem;
         border-radius: 6px;
     }
     a:hover{
-        background-color: transparent;
-        border: solid 2px rgb(44, 10, 10);
+        background-color: $clr-secondary;
+        border: solid 2px $clr-a;
         transition-duration: 1s;
     }
 }
+.container-contact{
+padding-top: 10rem;
+
 form{
     display: flex;
     flex-direction: column;
@@ -94,36 +114,50 @@ form{
     display: flex;
     justify-content: space-between;
     .info{
-        // border: green solid 1px;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 40%;
         label{
             margin-top: 5rem;
+            color: $text-color;
         }
         input{
             width: 100%;
             padding: 0.5rem 0;
             background-color: transparent;
             border-radius: 6px;
-            border: 1px solid black;
+            border: 1px solid $text-color;
+            color: $text-color;
             }
+            input:hover{
+                border: $clr-primary solid 3px;
+            }
+            input:focus{
+                background-color: $clr-primary;
+            }
+        }
     }
-}
-.message{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    textarea{
-        width: 100%;
-        border-radius: 6px;
-            border: 1px solid black;
+    .message{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        textarea{
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid silver;
             background-color: transparent;
-    }
+            color: $text-color;
+        }
+        textarea:hover{
+            border: $clr-primary solid 3px;
+        }
+        textarea:focus{
+            background-color: $clr-primary;
+        }
     ::placeholder{
-        color: black;
+        color: $text-color;
     }
 }
 .submit{
@@ -135,71 +169,12 @@ form{
     gap: 2rem;
     margin-top: 2rem;
     input{
-        padding: 0 2rem;
+        padding: 0.5rem 2rem;
         background-color: transparent;
-        border: black solid 1px;
+        border: $text-color solid 1px;
         border-radius: 16px;
+        color: $text-color;
+        cursor: pointer;
     }
 }
-// .form-container{
-//     // display: flex;
-//     // gap: 10rem;
-//     justify-content: center;
-//     .info{
-//         display: flex;
-//         flex-direction: column;
-//         text-align: center;
-//         // width: 20%;
-//         label{
-//         margin-top: 5rem;
-//         }
-//     }
-// }
-// form{
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     .form-container{
-//         border: red solid 1px;
-//         .info{
-//         border: red solid 1px;
-//         input{
-//             padding: 0 10rem;
-//         }
-//         }
-//     }
-//     input{
-//         background-color: transparent;
-//         border: black solid 1px;
-//         border-radius: 3px;
-//         height: 1.5rem;
-//     }
-
-//     textarea{
-//         background-color: transparent;
-//         border: black solid 1px;
-//         border-radius: 8px;
-//         width: 75%;
-//     }
-//     .message{
-//         margin-top: 5rem;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-
-//     }
-//     .submit{
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         flex-wrap: wrap;
-//         gap: 2rem;
-//         margin-top: 2rem;
-//         input{
-//             padding: 0 5%;
-//             // width: 10rem;
-//         }
-//         // display: flex;
-//         // justify-content: space-between;
-//     }
-// }
+}
