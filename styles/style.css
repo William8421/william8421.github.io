@@ -167,6 +167,9 @@ main a {
   gap: 0.5rem;
 }
 
+.project {
+  min-width: 100%;
+}
 .project .pic {
   height: 60%;
 }
@@ -404,7 +407,6 @@ header .burger-menu .burger__list .burger__item :active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-items: flex-end;
   }
   .container-projects .sub-container-projects .pic {
     display: flex;
@@ -506,7 +508,6 @@ header .burger-menu .burger__list .burger__item :active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-items: flex-end;
   }
   .container-projects .sub-container-projects .pic {
     display: flex;
