@@ -2,13 +2,13 @@ main{
     position: absolute;
     top: 40%;
     left: 17.5%;
-    
+
     h1{
         font-family: 'BenchNine', sans-serif;
         font-size: 80px;
         color: $clr-secondary;
     }
-    
+
     p{
         width: 60%;
         height: 60%;
@@ -52,37 +52,42 @@ main{
 .sub-container-projects{
     margin-top: 8rem;
     display: grid;
-    grid-template-columns: 17.5vw repeat(12, 1fr) 17.5vw;
-    grid-template-rows: repeat(10, 10%);
+    grid-template-columns: 17.5vw repeat(10, 1fr) 17.5vw;
+    grid-template-rows: repeat(8, 1fr);
     gap: 0.5rem;
 }
 .project{
-    min-width: 100%;
-    .pic{
-        height: 60%;
-        img{
-            width: 100%;
+        .pic{
+            a{
+                img{
+                width: 100%;
+                display: block;
+            }
         }
     }
 }
+.project:hover{
+    transform: scale(1.01);
+    box-shadow: -4px 5px 3px orange;
+}
 .project-1{
-    grid-area: 1/2/4/8;
+    grid-area: 1/2/5/7;
+    height: 100%;
 }
 .project-2{
-    grid-area: 1/8/3/10;
-    
+    grid-area: 1/7/7/9;
 }
 .project-3{
-    grid-area: 1/10/3/14;
+    grid-area: 1/9/4/12;
 }
 .project-4{
-    grid-area: 4/2/6/8;
+    grid-area: 5/2/9/7;
 }
 .project-5{
-    grid-area: 3/10/5/14;
+    grid-area: 4/9/7/12;
 }
 .project-6{
-    grid-area: 5/8/7/14;
+    grid-area: 7/7/9/12;
 }
 
 .text{
