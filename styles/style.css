@@ -119,12 +119,9 @@ main {
   left: 17.5%;
 }
 main h1 {
+  font-family: "BenchNine", sans-serif;
   font-size: 80px;
   color: #001d4f;
-}
-main h6 {
-  letter-spacing: 3rem;
-  border: red solid 1px;
 }
 main p {
   width: 60%;
