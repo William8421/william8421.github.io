@@ -8,7 +8,6 @@ header{
         width: 100vw;
         margin: 2rem 0;
         background-color: rgba($color: #252020, $alpha: 0.7);
-        // background-color: silver;
         align-items: center;
         z-index: 100;
         a{
@@ -26,6 +25,9 @@ header{
                 margin-left: 1rem;
                 margin-top: 0.5rem;
                 color: white;
+                h6{
+                    letter-spacing: 0.05rem;
+                }
             }
         }
         ul{

@@ -27,6 +27,9 @@ header .nav-top .icon .name {
   margin-top: 0.5rem;
   color: white;
 }
+header .nav-top .icon .name h6 {
+  letter-spacing: 0.05rem;
+}
 header .nav-top ul {
   display: flex;
   margin-left: auto;
@@ -118,6 +121,10 @@ main {
 main h1 {
   font-size: 80px;
   color: #001d4f;
+}
+main h6 {
+  letter-spacing: 3rem;
+  border: red solid 1px;
 }
 main p {
   width: 60%;
@@ -297,6 +304,9 @@ main a {
   border-radius: 16px;
   color: silver;
   cursor: pointer;
+}
+.container-contact .submit input:hover {
+  background-color: #391128;
 }
 
 @media (min-width: 922px) and (max-width: 1200px) {
