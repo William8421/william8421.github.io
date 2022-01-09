@@ -5,21 +5,7 @@
     .nav-bottom{
         margin: 2rem 0;
     }
-    // .container-projects{
-    //     .sub-container-projects{
-    //         display: flex;
-    //         flex-wrap: wrap;
-    //         justify-content: space-around;
-    //         // width: 80%;
-    //         .project{
-    //             height: 50%;
-    //             width: 35%;
-    //         }
-    //         .project-3{
-    //             margin-top: 1rem;
-    //         }
-    //     }
-    // }
+  
 
     main{
         h1{
@@ -56,16 +42,7 @@
         }
     }
 
-//     .container-projects{
-//         .sub-container-projects{
-//             width: 100%;
-//             gap: 1rem;
-//             .project{
-//             height: 50%;
-//             }
 
-//     }
-// }
 }
 @media (min-width:600px) and (max-width: 778px) {
     header{
@@ -153,14 +130,7 @@
 
 
     .container-projects{
-        // height: 100%;
-        // overflow:scroll;
-        // .sub-container-projects{
-        //     gap: 1rem;
-        //     .project{
-        //         width: 80%;
-        //     }
-        // }
+        
         .sub-container-projects{
             display: flex;
             flex-direction: column;
